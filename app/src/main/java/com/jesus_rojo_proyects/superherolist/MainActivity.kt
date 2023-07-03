@@ -77,11 +77,18 @@ class MainActivity : AppCompatActivity() {
                             retrofit.create(Provider::class.java).getSuperHeroes(query)
                         val response: SuperHeroModel? = res.body()
                         if (response != null) {
-                            runOnUiThread {
-                                adapter.updateDataList(response.results)
-                                binding.progressBarView.isVisible = false
+                            if (response.response == "error") {
+                                runOnUiThread {
+                                    binding.progressBarView.isVisible = false
+                                }
+                                Log.d("ROJO", response.toString())
+                            } else {
+                                runOnUiThread {
+                                    adapter.updateDataList(response.results)
+                                    binding.progressBarView.isVisible = false
+                                }
+                                Log.d("ROJO", response.toString())
                             }
-                            Log.d("ROJO", response.toString())
                         }
                     }
                 } catch (e: IOException) {
