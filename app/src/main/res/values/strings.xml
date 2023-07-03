@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">superHeroList</string>
+    <string name="lost_connection"> Red LOST!, please reconnect you red</string>
+    <string name="name"> Name: </string>
+    <string name="gender"> Gender: </string>
+    <string name="race"> Race: </string>
+    <string name="power_stats"> Power Stats </string>
+    <string name="biography"> Biography: </string>
+</resources>
