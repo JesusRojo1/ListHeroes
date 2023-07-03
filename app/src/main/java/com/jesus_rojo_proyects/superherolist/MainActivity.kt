@@ -109,7 +109,7 @@ class MainActivity : AppCompatActivity() {
     private fun getRetrofit(): Retrofit {
         return Retrofit
             .Builder()
-            .baseUrl("https://superheroapi.com/api/10225998847571749/")
+            .baseUrl("https://superheroapi.com/api/YOUR_API_KEY/")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
     }
